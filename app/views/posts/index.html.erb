@@ -1,5 +1,9 @@
-  <% for post in @post %>
-      <p>
-      <%= post["title"] %>
-      </p>
-  <% end %>
+<h1>My Posts</h1>
+
+<% for post in @post %>
+  <p>
+  <h3><%= post["title"] %></h3>
+  <b><%= post["posted_on"] %></b> <br>
+  <%= post["description"] %> 
+  </p>
+<% end %>

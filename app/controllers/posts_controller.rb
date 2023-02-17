@@ -4,6 +4,10 @@ class PostsController < ApplicationController
         @post = Post.all
     end
 
+    def show
+        @posts = Post.where({"place_id" => params["id"] })
+    end
+
     def new
         @post = Post.new
     end
